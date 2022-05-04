@@ -20,4 +20,6 @@ public class UsuarioActivity extends AppCompatActivity {
         String nombre = getIntent().getStringExtra("nombre");
         jtvnombre.setText(jtvnombre.getText().toString() + " " + nombre);
     }
+
+
 }

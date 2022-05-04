@@ -75,7 +75,7 @@ public class registroActivity extends AppCompatActivity implements Response.List
         if (jetnombre.getText().toString().isEmpty() || jetclave.getText().toString().isEmpty() || jetusr.getText().toString().isEmpty() || jetcorreo.getText().toString().isEmpty()) {
             Toast.makeText(this, "Todos Los Campos Son Obligatorios!", Toast.LENGTH_SHORT).show();
         } else {
-            String url = "http://172.16.61.101:8081/usuarios/registrocorreo.php";
+            String url = "http://172.16.61.101:8081/usuarios6am/registrocorreo.php";
             StringRequest postRequest = new StringRequest(Request.Method.POST, url,
                     new Response.Listener<String>()
                     {
@@ -119,7 +119,7 @@ public class registroActivity extends AppCompatActivity implements Response.List
             jetusr.requestFocus();
         }
         else{
-            String url = "http://172.16.61.101:8081/usuarios/consulta.php?usr="+jetusr.getText().toString();
+            String url = "http://172.16.61.101:8081/usuarios6am/consulta.php?usr="+jetusr.getText().toString();
             jrq = new JsonObjectRequest(Request.Method.GET,url,null,this::onResponse,this::onErrorResponse);
             rq.add(jrq);
         }
